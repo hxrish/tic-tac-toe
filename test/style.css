@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid_container{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+}
+
+#firstCell{
+    border-top: none;
+    border-left: none;
+}
+
+#secondCell{
+    border-top: none;
+}
+
+#thirdCell{
+    border-top: none;
+    border-right: none;
+}
+
+#forthCell{
+    border-left: none;
+}
+
+#sixthCell{
+    border-right: none;
+}
+
+#seventhCell{
+    border-left: none;
+    border-bottom: none;
+}
+
+#eighthCell{
+    border-bottom: none;
+}
+
+#ninthCell{
+    border-right: none;
+    border-bottom: none;
+}
