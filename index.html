@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-tac-toe</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="main_container">
-        <div id="grid_container">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+    <div id="main_container">
+        <div id="header">Tic Tac Toe</div>
+        <div id="main_body">
+            <div class="data_container">
+                <div id="left_nameContainer">
+                <label for="name_left">
+                    Name:
+                </label>
+                <input type="text" name="name_left" id="name_left">
+            </div>
+            <div class="mark_selection">
+                <label for="left_markSelector">
+                    <input type="checkbox" name="left_markSelector" id="left_markSelector">
+                    <div id="left_markAnimator"></div>
+                </label>
+            </div>
+            </div>
+            <div id="vs_signContainer">
+                VS
+            </div>
+            <div class="data_container">
+                <div id="right_nameContainer">
+                <label for="name_right">
+                    Name:
+                </label>
+                <input type="text" name="name_right" id="name_right">
+            </div>
+            <div class="mark_selection">
+                <label for="right_markSelector">
+                    <input type="checkbox" name="right_markSelector" id="right_markSelector">
+                    <div id="right_markAnimator"></div>
+                </label>
+            </div>
+            </div>
+        </div>
+        <div id="play_btnContainer">
+            <button id="play_btn">Play</button>
         </div>
     </div>
 </body>
