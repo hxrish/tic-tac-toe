@@ -1,0 +1,124 @@
+body{
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_container{
+    width: 100%;
+    height: 100vh;
+    background-color: #EB5A43;
+    display: grid;
+    grid-template-rows: 1.2fr 7fr;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    background-color: #A15145;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    font-family: 'Ubuntu', sans-serif;
+    color: #44EB9E;
+}
+
+#player1_report{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+}
+
+#player1_name{
+    display: flex;
+}
+
+#home_img{
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
+}
+
+
+#player2_report{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 3;
+    /* background-color: blanchedalmond; */
+    color: black;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.game_container{
+    width: 100%;
+    height: 100%;
+    background-color: #EB5A43;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-container{
+    width: 31.25rem;
+    height: 31.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid_cell{
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+}
+
+
+#firstCell{
+    border-top: none;
+    border-left: none;
+}
+
+#secondCell{
+    border-top: none;
+}
+
+#thirdCell{
+    border-top: none;
+    border-right: none;
+}
+
+#forthCell{
+    border-left: none;
+}
+
+#sixthCell{
+    border-right: none;
+}
+
+#seventhCell{
+    border-left: none;
+    border-bottom: none;
+}
+
+#eighthCell{
+    border-bottom: none;
+}
+
+#ninthCell{
+    border-right: none;
+    border-bottom: none;
+}
