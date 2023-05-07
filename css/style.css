@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+
+
+#main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    background-color: #A15145;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+    color: #44EB9E;
+}
+
+#main_body{
+    height: 25rem;
+    display: flex;
+    background-color: #EB5A43;
+    padding: 16px;
+}
+
+.data_container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr;
+}
+
+input{
+    caret-color: black;
+}
+
+
+#left_nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 2;
+}
+
+
+label[for="name_left"]{
+    display: block;
+    width: 20rem;
+    height: auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    color: #44EB9E;
+}
+
+input[id="name_left"]{
+    display: block;
+    width: 20rem;
+    height: 5rem;
+    margin-top: -30px;
+    padding: 0;
+    font-size: 3rem;
+    border: 3px solid;
+}
+
+.mark_selection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 3;
+}
+
+label[for="left_markSelector"]{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 60px;
+}
+
+input#left_markSelector{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#left_markAnimator{
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background: #FF9180;
+    transition: background 0.2s;
+    border-radius: 60px;
+}
+
+input#left_markSelector:checked~div#left_markAnimator{
+    background: red;
+    transition: background 0.2s;
+    
+}
+
+#left_markAnimator::after{
+    content: "O";
+    position: absolute;
+    width: 5rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+input#left_markSelector:checked~div#left_markAnimator::after{
+    content: "X";
+    transform: translateX(100%);
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+#vs_signContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
+}
+
+
+#right_nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 2;
+}
+
+
+label[for="name_right"]{
+    display: block;
+    width: 20rem;
+    height: auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    color: #44EB9E;
+}
+
+input[id="name_right"]{
+    display: block;
+    width: 20rem;
+    height: 5rem;
+    margin-top: -30px;
+    padding: 0;
+    font-size: 3rem;
+    border: 3px solid;
+}
+
+
+label[for="right_markSelector"]{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 60px;
+}
+
+input#right_markSelector{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#right_markAnimator{
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background: #FF9180;
+    transition: background 0.2s;
+    border-radius: 60px;
+}
+
+input#right_markSelector:checked~#right_markAnimator{
+    background: red;
+    transition: background 0.2s;
+    
+}
+
+#right_markAnimator::after{
+    content: "O";
+    position: absolute;
+    width: 5rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+input#right_markSelector:checked~div#right_markAnimator::after{
+    content: "X";
+    transform: translateX(100%);
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+
+#play_btnContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #EB5A43;
+    justify-content: center;
+}
+
+#play_btn{
+    width: 11rem;
+    height: 4rem;
+    background-color: #0E9E5C;
+    font-size: 3rem;
+    font-family: 'Darumadrop One', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 1280px) {
+    #main_body{
+        height: 35rem;
+        display: flex;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 0.3fr;
+        background-color: #EB5A43;
+        padding: 16px;
+    }
+    
+}
+
+@media (max-width: 1230px) {
+    #main_body{
+        height: 25rem;
+        display: flex;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 0.3fr;
+        background-color: #EB5A43;
+        padding: 16px;
+    }
+    
+}
+
+@media (max-width: 905px) {
+    
+#right_nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 2;
+}
+
+
+label[for="name_right"]{
+    display: block;
+    width: 15rem;
+    height: auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: #44EB9E;
+}
+
+input[id="name_right"]{
+    display: block;
+    width: 15rem;
+    height: 5rem;
+    margin-top: -30px;
+    padding: 0;
+    font-size: 3rem;
+    border: 3px solid;
+}
+    #left_nameContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-row-start: 2;
+    }
+    
+    
+    label[for="name_left"]{
+        display: block;
+        width: 15rem;
+        height: auto;
+        font-family: 'Pacifico', cursive;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+        color: #44EB9E;
+    }
+    
+    input[id="name_left"]{
+        display: block;
+        width: 15rem;
+        height: 5rem;
+        margin-top: -30px;
+        padding: 0;
+        font-size: 3rem;
+        border: 3px solid;
+}
+}
+
+@media (max-width: 901px) {
+        
+#right_nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 2;
+}
+
+
+label[for="name_right"]{
+    display: block;
+    width: 15rem;
+    height: auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-top: -10px;
+    margin: 0;
+    padding: 0;
+    color: #44EB9E;
+}
+
+input[id="name_right"]{
+    display: block;
+    width: 15rem;
+    height: 5rem;
+    margin-top: -10px;
+    padding: 0;
+    font-size: 3rem;
+    border: 3px solid;
+}
+
+input[id="name_left"]{
+    display: block;
+    width: 15rem;
+    height: 5rem;
+    margin-top: -10px;
+    padding: 0;
+    font-size: 3rem;
+    border: 3px solid;
+}
+}
