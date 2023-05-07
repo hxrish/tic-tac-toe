@@ -22,8 +22,8 @@ playerName_2.innerText = `${playerInfo.player2_name}:`;
 let player1_score = 0;
 let player2_score = 0;
 
-playerScore_1.innerText = player1_score;
-playerScore_2.innerText = player2_score;
+// playerScore_1.innerText = player1_score;
+// playerScore_2.innerText = player2_score;
 
 
 
@@ -100,8 +100,6 @@ let playingPlayer;
 
 function winning(player){
     if(gridcells[0].innerText === gridcells[4].innerText && gridcells[4].innerText === gridcells[8].innerText   && gridcells[8].innerText != '' && gridcells[0].innerText != ''  && gridcells[4].innerText != '' ){        console.log(`${player.name} win!`);
-    playerScore_1.innerText = player1_score;
-playerScore_2.innerText = player2_score;
         gamewon = true;
 
         if(player.name == playerInfo.player1_name){
@@ -110,42 +108,47 @@ playerScore_2.innerText = player2_score;
             player2_score += 1;
         }
 
+        playerScore_1.innerText = player1_score;
+        playerScore_2.innerText = player2_score;
+
     } //Diagonal winning from 0 till 8
     else if(gridcells[2].innerText === gridcells[4].innerText && gridcells[4].innerText === gridcells[6].innerText   && gridcells[2].innerText != '' && gridcells[4].innerText != ''  && gridcells[6].innerText != '' ){
         console.log(`${player.name} win!`);
-        playerScore_1.innerText = player1_score;
-        playerScore_2.innerText = player2_score;
 
         if(player.name == playerInfo.player1_name){
             player1_score += 1;
         }else{
             player2_score += 1;
         }
+
+        playerScore_1.innerText = player1_score;
+        playerScore_2.innerText = player2_score;
 
 
         gamewon = true;
     }
     else if(gridcells[0].innerText === gridcells[1].innerText && gridcells[1].innerText === gridcells[2].innerText   && gridcells[2].innerText != '' && gridcells[0].innerText != ''  && gridcells[1].innerText != '' ){
         console.log(`${player.name} win!`);
+        if(player.name == playerInfo.player1_name){
+            player1_score += 1;
+        }else{
+            player2_score += 1;
+        }
         playerScore_1.innerText = player1_score;
         playerScore_2.innerText = player2_score;
+
+        gamewon = true;
+    } //Horizontal line winning from 0 till 2
+    else if(gridcells[3].innerText === gridcells[4].innerText && gridcells[4].innerText === gridcells[5].innerText   && gridcells[3].innerText != '' && gridcells[4].innerText != ''  && gridcells[5].innerText != '' ){
+        console.log(`${player.name} win!`);
         if(player.name == playerInfo.player1_name){
             player1_score += 1;
         }else{
             player2_score += 1;
         }
 
-        gamewon = true;
-    } //Horizontal line winning from 0 till 2
-    else if(gridcells[3].innerText === gridcells[4].innerText && gridcells[4].innerText === gridcells[5].innerText   && gridcells[3].innerText != '' && gridcells[4].innerText != ''  && gridcells[5].innerText != '' ){
-        console.log(`${player.name} win!`);
         playerScore_1.innerText = player1_score;
         playerScore_2.innerText = player2_score;
-        if(player.name == playerInfo.player1_name){
-            player1_score += 1;
-        }else{
-            player2_score += 1;
-        }
 
         gamewon = true;
     } //Horizontal line winning from 3 till 5
